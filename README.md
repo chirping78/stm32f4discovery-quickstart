@@ -1,4 +1,16 @@
-# `cortex-m-quickstart`
+# `stm32f4discovery-quickstart`
+
+[The embedded Rust book][1] and [The Discovery book][2] are based on STM32F3DISCOVERY board, but I have only a STM32F4DISCOVERY.
+Use this repository to record the examples tuned for F4.
+
+[1]: https://docs.rust-embedded.org/book/index.html
+[2]: https://docs.rust-embedded.org/discovery/index.html
+
+The embedded Rust book: [2.2. Hardware][hardware]
+
+[hardware]: https://github.com/chirping78/stm32f4discovery-quickstart/tree/hardware
+
+# Original readme keep here for reference
 
 > A template for building applications for ARM Cortex-M microcontrollers
 
