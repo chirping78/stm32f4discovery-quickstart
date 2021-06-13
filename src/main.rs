@@ -12,7 +12,9 @@ use cortex_m_rt::entry;
 
 #[entry]
 fn main() -> ! {
-    asm::nop(); // To not have main optimize to abort in release mode, remove when you add code
+    let _y;
+    let x = 42;
+    _y = x;
 
     loop {
         // your code goes here
