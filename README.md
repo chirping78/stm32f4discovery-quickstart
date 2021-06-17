@@ -8,7 +8,10 @@ Use this repository to record the examples tuned for F4.
 
 The embedded Rust book: [2.2. Hardware][hardware]
 
+The Discovery book: [5. LED roulette][led-roulette]
+
 [hardware]: https://github.com/chirping78/stm32f4discovery-quickstart/tree/hardware
+[led-roulette]: https://github.com/chirping78/stm32f4discovery-quickstart/tree/led-roulette
 
 # Original readme keep here for reference
 
