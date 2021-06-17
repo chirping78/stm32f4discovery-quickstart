@@ -33,13 +33,31 @@ fn main() -> ! {
         gpiod.pd15.into_push_pull_output(),
     );
 
-    let mut half_period = 500_u16;
+    let mut half_period = 50_u16;
     let volatile = Volatile::new(&mut half_period);
     loop {
-        led.0.set_high().unwrap();
+        led.1.set_high().unwrap();
         delay.delay_ms(volatile.read());
 
         led.0.set_low().unwrap();
+        delay.delay_ms(volatile.read());
+
+        led.2.set_high().unwrap();
+        delay.delay_ms(volatile.read());
+
+        led.1.set_low().unwrap();
+        delay.delay_ms(volatile.read());
+
+        led.3.set_high().unwrap();
+        delay.delay_ms(volatile.read());
+
+        led.2.set_low().unwrap();
+        delay.delay_ms(volatile.read());
+
+        led.0.set_high().unwrap();
+        delay.delay_ms(volatile.read());
+
+        led.3.set_low().unwrap();
         delay.delay_ms(volatile.read());
     }
 }
