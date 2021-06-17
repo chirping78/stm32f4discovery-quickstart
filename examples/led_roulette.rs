@@ -12,6 +12,7 @@ use cortex_m_rt::entry;
 use stm32f4xx_hal as hal;
 
 use hal::{prelude::*, stm32};
+use volatile::Volatile;
 
 #[entry]
 fn main() -> ! {
@@ -32,12 +33,13 @@ fn main() -> ! {
         gpiod.pd15.into_push_pull_output(),
     );
 
-    let half_period = 500_u16;
+    let mut half_period = 500_u16;
+    let volatile = Volatile::new(&mut half_period);
     loop {
         led.0.set_high().unwrap();
-        delay.delay_ms(half_period);
+        delay.delay_ms(volatile.read());
 
         led.0.set_low().unwrap();
-        delay.delay_ms(half_period);
+        delay.delay_ms(volatile.read());
     }
 }
