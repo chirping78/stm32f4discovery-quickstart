@@ -1,3 +1,25 @@
+# hello-itm
+
+This experiment needs three terminals.
+
+Terminal 1#
+```
+openocd
+```
+
+Terminal 2#
+```
+cargo build --example itm
+arm-none-eabi-gdb.exe -q -x .\openocd.gdb .\target\thumbv7em-none-eabihf\debug\examples\itm
+```
+
+Terminal 3#
+```
+itmdump -F -f itm.txt
+```
+
+Then back to Terminal 2# to continue the debugging, and get the itm output in Terminal 3#.
+
 # `cortex-m-quickstart`
 
 > A template for building applications for ARM Cortex-M microcontrollers
