@@ -23,7 +23,8 @@ monitor arm semihosting enable
 
 # # send captured ITM to the file itm.fifo
 # # (the microcontroller SWO pin must be connected to the programmer SWO pin)
-# # 8000000 must match the core clock frequency
+# # 16000000 must match the core clock frequency
+# # the HSI of F4 is 16MHz
 monitor tpiu config internal itm.txt uart off 16000000
 
 # # OR: make the microcontroller SWO pin output compatible with UART (8N1)
