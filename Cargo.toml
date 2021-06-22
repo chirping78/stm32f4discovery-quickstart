@@ -24,6 +24,9 @@ panic-itm = "0.4.1"
 # [dependencies.stm32f3]
 # features = ["stm32f303", "rt"]
 # version = "0.7.1"
+[dependencies.stm32f4xx-hal]
+version = "0.9"
+features = ["rt", "stm32f407"]
 
 # this lets you use `cargo fix`!
 [[bin]]
