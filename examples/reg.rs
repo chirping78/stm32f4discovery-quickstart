@@ -27,15 +27,14 @@ fn main() -> ! {
     const GPIOD_BSRR: u32 = 0x4002_0C00 + 0x18;
 
     unsafe {
-        *(GPIOD_BSRR as *mut u32) = 1 << 12;
-        *(GPIOD_BSRR as *mut u32) = 1 << 13;
-        *(GPIOD_BSRR as *mut u32) = 1 << 14;
-        *(GPIOD_BSRR as *mut u32) = 1 << 15;
-
-        *(GPIOD_BSRR as *mut u32) = 1 << (12 + 16);
-        *(GPIOD_BSRR as *mut u32) = 1 << (13 + 16);
-        *(GPIOD_BSRR as *mut u32) = 1 << (14 + 16);
-        *(GPIOD_BSRR as *mut u32) = 1 << (15 + 16);
+        core::ptr::write_volatile(GPIOD_BSRR as *mut u32, 1 << 12);
+        core::ptr::write_volatile(GPIOD_BSRR as *mut u32, 1 << 13);
+        core::ptr::write_volatile(GPIOD_BSRR as *mut u32, 1 << 14);
+        core::ptr::write_volatile(GPIOD_BSRR as *mut u32, 1 << 15);
+        core::ptr::write_volatile(GPIOD_BSRR as *mut u32, 1 << (12 + 16));
+        core::ptr::write_volatile(GPIOD_BSRR as *mut u32, 1 << (13 + 16));
+        core::ptr::write_volatile(GPIOD_BSRR as *mut u32, 1 << (14 + 16));
+        core::ptr::write_volatile(GPIOD_BSRR as *mut u32, 1 << (15 + 16));
     }
 
     loop {}
