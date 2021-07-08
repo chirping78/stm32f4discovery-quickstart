@@ -12,9 +12,12 @@ The Discovery book: [5. LED roulette][led-roulette]
 
 The Discovery book: [6. Hello, world!][hello-itm]
 
+The Discovery book: [7.2. (mis)Optimization][raw-reg]
+
 [hardware]: https://github.com/chirping78/stm32f4discovery-quickstart/tree/hardware
 [led-roulette]: https://github.com/chirping78/stm32f4discovery-quickstart/tree/led-roulette
 [hello-itm]: https://github.com/chirping78/stm32f4discovery-quickstart/tree/hello-itm
+[raw-reg]: https://github.com/chirping78/stm32f4discovery-quickstart/tree/raw-reg
 
 # Original readme keep here for reference
 
